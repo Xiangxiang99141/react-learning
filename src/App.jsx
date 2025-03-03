@@ -71,12 +71,19 @@ const Menus1 = () => {
   )
 }
 
+const user = {
+  name: 'John Doe',
+  imageUrl:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/120px-Google_Chrome_icon_%28February_2022%29.svg.png',
+  imageSize:90
+}
+
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className='App'>
-      <Router>
+      {/* <Router>
           <Routes>
               <Route element={<Home />} path={'/'}></Route>
               <Route element={<About />} path='/about'></Route>
@@ -85,7 +92,7 @@ function App() {
                   <Route element={<Child2 />} path='/list/child2'></Route>
               </Route>
           </Routes>
-      </Router>
+      </Router> */}
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -99,6 +106,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 2)}>
           count is {count}
         </button>
+        <button onClick={() => setCount(0)}>Reset</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -106,6 +114,16 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div className="profile">
+        <h2>Profile</h2>
+        <ul>
+          <li>Name: {user.name}</li>
+          <img src={user.imageUrl} alt="" style={{
+            width: user.imageSize,
+            height: user.imageSize
+          }}/>
+        </ul>
+      </div>
     </div>
   )
 }

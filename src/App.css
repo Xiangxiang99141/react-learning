@@ -18,6 +18,21 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.card{
+  margin-right: 5px;
+}
+
+.profile{
+  background-color: #3f3f3f;
+  border-radius: 15px;
+  transition: linear 0.2s;
+}
+
+.profile:hover{
+  background-color: #4f4f4f;
+  transform: scale(1.05);
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
