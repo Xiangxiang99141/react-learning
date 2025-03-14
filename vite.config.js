@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:'/react-learning'  //設定base url 避免白畫面
+  base:'/'  //設定base url 避免白畫面
 })
