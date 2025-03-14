@@ -12,56 +12,45 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Container} from 'react-bootstrap';
-import { Button,Stack } from 'react-bootstrap';
+import { Button,Stack,Form } from 'react-bootstrap';
+
+import userlist from './assets/account.js';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [isLogin,setLogin] = useState(false);
+  console.log(isLogin);
+  let content;
+  if(isLogin){
+    content = 'yes'
+  }else{
+    content = 'no'
+  }
+  // console.log(userlist);
   return (
-    
-    <div className='App'>
-      {/* <Router>
-          <Routes>
-              <Route element={<Home />} path={'/'}></Route>
-              <Route element={<About />} path='/about'></Route>
-              <Route element={<List />} path='/list'>
-                  <Route element={<Child1 />} path='/list/child1'></Route>
-                  <Route element={<Child2 />} path='/list/child2'></Route>
-              </Route>
-          </Routes>
-      </Router> */}
-      <Container fluid>
-        <div>
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 2)}>
-            count is {count}
-          </button>
-          <button onClick={() => setCount(0)}>Reset</button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </Container>
-      <Stack direction="horizontal" gap={3}>
-        <Button as="a" variant="primary">
-          Button as link
+    <Container>
+      <Form>
+        <input type="text" placeholder="username" id="name"></input>
+        <input type="text" placeholder="passwoed" id="password"></input>
+        <Button variant="primary" onClick={() => {
+          for(let i=0;i<userlist.length;i++){
+            if(document.getElementById('name').value == userlist[i].name && document.getElementById('password').value == userlist[i].password){
+              setLogin(true);
+              return;
+            }
+            alert("帳密錯誤");
+          }
+        }}>
+          Submit
         </Button>
-        <Button as="a" variant="success">
-          Button as link
+        <Button variant="primary" onClick={() => setLogin(false)}>
+          Logout
         </Button>
-      </Stack>
-    </div>
+      </Form>
+      <div className="div">
+          <p>login : {content}</p>
+      </div>
+    </Container>
   )
 }
 
