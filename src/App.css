@@ -1,25 +1,8 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
-}
-
-
-
-.card{
-  margin-right: 5px;
-}
-
-.profile{
-  background-color: #3f3f3f;
-  border-radius: 15px;
-  transition: linear 0.2s;
-}
-
-.profile:hover{
-  background-color: #4f4f4f;
-  transform: scale(1.05);
 }
 
 @keyframes logo-spin {
@@ -37,10 +20,3 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
