@@ -2,25 +2,29 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Container,Navbar,Nav,NavDropdown } from "react-bootstrap";
 // import '../assets/styles/Header.css';
+import Main from "../router/Main"
+import Tools from "../router/Tools"
+import Site from "../config/SiteRouter";
 
 function Header() {
     return (
         <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
             <Container fluid>
-                <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="/">狗哥的網頁</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="/">首頁</Nav.Link>
-                    <Nav.Link href="/about">關於我</Nav.Link>
-                    <NavDropdown title="工具" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/tools/settlement">結算表</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    {Site.getHeader(Main)}
+                    {Site.getHeader(Tools)}
+
+                    {/* <NavDropdown title="工具" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="/tools">工具列表</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#">
+                    <NavDropdown.Item href="/tools/settlement">結算表</NavDropdown.Item>
+                    <NavDropdown.Item>
                         持續增加中...
                     </NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> */}
                 </Nav>
                 </Navbar.Collapse>
             </Container>
