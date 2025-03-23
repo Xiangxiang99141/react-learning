@@ -61,7 +61,7 @@ const Site = {
 function getChildren(children){
     for(let i=1;i<children.length;i++){
         return(
-            <NavDropdown.Item href="/tools/settlement">結算表</NavDropdown.Item>
+            <NavDropdown.Item href={children[i].fullpath}>{children[i].name}</NavDropdown.Item>
         )
     }
 }
