@@ -9,10 +9,12 @@ import Footer from './pages/Footer';
 import { Container } from 'react-bootstrap';
 import Tools from './router/Tools';
 import Main from './router/Main';
+import ComponentsRouter from './router/ComponentsRouter';
 function App() {
   const allRoute = useRoutes([
     ...Main,
-    ...Tools
+    ...Tools,
+    ...ComponentsRouter
   ]);
 
   return (
