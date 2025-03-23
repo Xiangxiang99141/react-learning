@@ -1,8 +1,12 @@
 import React from "react";
+import { Container } from "react-bootstrap";
+import "../assets/styles/Footer.css";
 function Footer() {
     return (
-        <footer>
-            <h3>Footer</h3>
+        <footer className="bg-body-tertiary" data-bs-theme="dark">
+            <Container fluid className="text-center">
+                @2025 狗哥
+            </Container>
         </footer>
     );
 }
