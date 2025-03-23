@@ -4,6 +4,7 @@ import { Container,Navbar,Nav,NavDropdown } from "react-bootstrap";
 // import '../assets/styles/Header.css';
 import Main from "../router/Main"
 import Tools from "../router/Tools"
+import ComponentsRouter from "../router/ComponentsRouter"
 import Site from "../config/SiteRouter";
 
 function Header() {
@@ -16,6 +17,7 @@ function Header() {
                 <Nav className="me-auto">
                     {Site.getHeader(Main)}
                     {Site.getHeader(Tools)}
+                    {Site.getHeader(ComponentsRouter)}
 
                     {/* <NavDropdown title="工具" id="basic-nav-dropdown">
                     <NavDropdown.Item href="/tools">工具列表</NavDropdown.Item>
