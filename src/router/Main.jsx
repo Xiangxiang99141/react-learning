@@ -14,7 +14,7 @@ const Main = [
         path:'/about',
         element:<About />,
         fullpath:'/about'
-    }
+    },
 ];
 
 export default Main;
