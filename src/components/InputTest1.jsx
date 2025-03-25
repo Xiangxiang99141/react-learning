@@ -28,7 +28,7 @@ function InputTest1(){
             <CardHeader>
                 輸入的文字會顯示在下面
             </CardHeader>
-            <CardBody>{text}</CardBody>
+            <CardBody className="h2">{text}</CardBody>
         </Card>
     </Stack>
     </>
