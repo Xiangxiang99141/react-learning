@@ -1,4 +1,4 @@
-import { Route,useRoutes } from "react-router-dom";
+import { Route,useLocation,useRoutes } from "react-router-dom";
 import { Nav,NavDropdown } from "react-bootstrap";
 const Site = {
     // Router : (site)=>{
@@ -16,8 +16,10 @@ const Site = {
     //     return(useRoutes(parentRoute));
     // },
     navigation:(site)=>{
+        const location = useLocation();
         return(
-            <Nav defaultActiveKey={site[0].path} as="ul" >
+            // <Nav variant="tabs" defaultActiveKey={site[0].path} as="ul" >
+            <Nav variant="tabs" defaultActiveKey={location.pathname} as="ul" >
                 {  site[0].children.map((child) => {
                         return(
                             <Nav.Item key={child.name} as="li">
