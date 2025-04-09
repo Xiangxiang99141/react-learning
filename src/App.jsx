@@ -10,17 +10,19 @@ import { Container } from 'react-bootstrap';
 import Tools from './router/Tools';
 import Main from './router/Main';
 import ComponentsRouter from './router/ComponentsRouter';
+import School from './router/school';
 function App() {
   const allRoute = useRoutes([
     ...Main,
     ...Tools,
-    ...ComponentsRouter
+    ...ComponentsRouter,
+    ...School
   ]);
 
   return (
     <>
       <Header />
-      <Container>
+      <Container fluid="md">
         {allRoute}
       </Container>
       <Footer />
