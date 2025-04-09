@@ -7,6 +7,11 @@ import Tools from "../router/Tools"
 import ComponentsRouter from "../router/ComponentsRouter"
 import Site from "../config/SiteRouter";
 
+const allHeader = [
+    ...Main,
+    ...Tools,
+    ...ComponentsRouter]
+
 function Header() {
     return (
         <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
@@ -15,18 +20,7 @@ function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    {Site.getHeader(Main)}
-                    {Site.getHeader(Tools)}
-                    {Site.getHeader(ComponentsRouter)}
-
-                    {/* <NavDropdown title="工具" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/tools">工具列表</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/tools/settlement">結算表</NavDropdown.Item>
-                    <NavDropdown.Item>
-                        持續增加中...
-                    </NavDropdown.Item>
-                    </NavDropdown> */}
+                    {Site.getHeader(allHeader)}
                 </Nav>
                 </Navbar.Collapse>
             </Container>
