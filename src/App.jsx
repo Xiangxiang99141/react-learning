@@ -10,13 +10,13 @@ import { Container } from 'react-bootstrap';
 import Tools from './router/Tools';
 import Main from './router/Main';
 import ComponentsRouter from './router/ComponentsRouter';
-import School from './router/school';
+// import School from './router/school';
 function App() {
   const allRoute = useRoutes([
     ...Main,
     ...Tools,
     ...ComponentsRouter,
-    ...School
+    // ...School
   ]);
 
   return (
