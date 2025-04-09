@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+/src/components/school
+/src/assets/styles/school.css
+/src/pages/school
+/src/router/school.jsx
