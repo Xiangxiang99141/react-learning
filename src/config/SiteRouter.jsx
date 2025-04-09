@@ -19,7 +19,7 @@ const Site = {
         const location = useLocation();
         return(
             // <Nav variant="tabs" defaultActiveKey={site[0].path} as="ul" >
-            <Nav variant="tabs" defaultActiveKey={location.pathname} as="ul" >
+            <Nav fill variant="tabs" defaultActiveKey={location.pathname} as="ul" >
                 {  site[0].children.map((child) => {
                         return(
                             <Nav.Item key={child.name} as="li">
@@ -32,10 +32,10 @@ const Site = {
         )
     },
     getHeader:(sites)=>{
-        //判斷需不需要Dropdown
         const navList = sites.map((site)=>{
             // console.log("site",site.children.length);
             // return(
+            //判斷需不需要Dropdown
             if(site.children){
                 return(
                     <NavDropdown title={site.name} id="basic-nav-dropdown" key={site.name}>
